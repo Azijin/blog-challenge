@@ -1,31 +1,208 @@
-.App {
-  text-align: center;
+header {
+  width: 100%;
+  background-color: #9f1f12;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+.blog-title {
+  color: white;
+  margin-bottom: 10px;
+  font-size: calc(43px * var(--scale));
+}
+.baseline {
+  color: #ff9c33;
+  font-size: calc(32px * var(--scale));
+  font-style: italic;
+  font-weight: 700;
+}
+.navigation-menu {
+  display: flex;
+  align-items: center;
+  background-color: #003049;
+  height: 50px;
+  position: relative;
+}
+.option {
+  padding: 14px 23px;
 
+  font-weight: 700;
+  color: #fcbf49;
+  cursor: pointer;
+}
+.option a {
+  font-size: calc(18px * var(--scale));
+}
+.option:hover {
+  color: #ff9c33;
+}
+.option:last-child {
+  position: absolute;
+  right: 0;
+}
+main {
+  display: flex;
+}
+/* RULES MAIN CONTENT */
+.mainContent {
+  width: 80%;
+  padding: 20px 10px 20px 20px;
+}
+article {
+  background-color: #fdd686;
+  padding: 20px 20px;
+}
+article:first-child {
+  margin-bottom: 20px;
+}
+.itemTitle {
+  font-size: calc(27px * var(--scale));
+  font-weight: 700;
+  color: #000e14;
+}
+.itemSubtitle {
+  font-size: calc(23px * var(--scale));
+  color: #001d29;
+}
+.itemTitle,
+.itemSubtitle {
+  padding-bottom: 10px;
+}
+.itemPicture {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.itemDescription {
+  padding-top: 10px;
+  font-size: calc(20px * var(--scale));
+  line-height: 21px;
+  color: #002b3d;
+}
+/* ABOUT ME RULES*/
+.sideContent {
+  width: 20%;
+  padding: 20px 10px 20px 20px;
+}
+.sideContent img {
+  height: auto;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+/* FOOTER RULES*/
+.footer {
+  background-color: #9f1f12;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+}
+.footer p {
+  font-size: calc(18px * var(--scale));
+  color: #ff9c33;
+  font-weight: bold;
+}
+.footer div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.footer a {
+  color: #ff9c33;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 5px;
+}
+footer > p > img:first-child,
+footer > p > img:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  animation: App-logo-spin infinite 20s linear;
+}
+footer > p > a > img {
+  width: 120px;
+  vertical-align: middle;
+}
+footer :nth-child(2) img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+.footer div a:link {
+  color: #ff9c33;
+}
+.footer div a:visited {
+  color: #ff9c33;
+}
+.footer i {
+  font-family: "Font Awesome 5 Brands" !important;
+  font-size: 24px;
+}
+.footer .fa-linkedin {
+  color: #2566c2;
+}
+.footer .fa-github {
+  color: #242a2e;
+}
 
+@media (min-width: 360px) and (max-width: 360px) {
+  .option {
+    flex: 1;
+    text-align: center;
+  }
+  .option:last-child {
+    position: relative;
+  }
+}
+@media (min-width: 360px) {
+  :root {
+    --scale: 0.7;
+  }
+}
+@media (min-width: 576px) {
+  :root {
+    --scale: 0.7;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --scale: 0.8;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --scale: 0.8;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --scale: 1;
+  }
+}
+@media (min-width: 1400px) {
+  :root {
+    --scale: 1.2;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
